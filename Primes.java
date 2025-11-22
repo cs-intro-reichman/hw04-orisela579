@@ -1,5 +1,48 @@
 public class Primes {
     public static void main(String[] args) {
-        // Replace this statement with your code
+        int x = Integer.parseInt(args[0]);
+        boolean[] arr = isPrime(x);
+        for(int i=0; i<arr.length; i++){
+            if (arr[i]==true) {
+                System.out.println(i);
+            }
+        }
+        
+    }
+
+    public static boolean[] isPrime(int num)
+    {
+        boolean[] primes = new boolean[num+1];
+        primes = trueEveryone(primes);
+        int p = 2;
+        primes[0] = false;
+        primes[1] = false;
+        while (p<=Math.sqrt(num)) {
+            int x = p;
+            while (x<num+1) {
+                if (x%p==0 && x!=p) {
+                    primes[x] = false;
+                }
+                x++;
+            }
+            p = firstTrue(primes, p+1);
+        }
+        return primes;
+    }
+
+    public static int firstTrue(boolean[] arr, int n){
+        for(int i=n; i<arr.length; i++){
+            if (arr[i]==true) {
+                return i;
+            }
+        }
+        return arr.length;
+    }
+
+    public static boolean[] trueEveryone(boolean[] arr){
+        for(int i=0; i<arr.length; i++){
+            arr[i] = true;
+        }
+        return arr;
     }
 }
