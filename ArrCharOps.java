@@ -136,7 +136,7 @@ public class ArrCharOps {
     public static long hashCode(char[] arr) {
         long x = 0;
         for(int i=0; i<arr.length; i++){
-            x += arr[i] * Math.pow(7, arr.length-i+1);
+            x += arr[i] * Math.pow(7, arr.length-i-1);
         }
         return x;
     }
