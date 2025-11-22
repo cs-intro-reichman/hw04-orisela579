@@ -11,7 +11,7 @@ public class Primes {
             }
         }
         double ratio = (double) count / x * 100;
-        System.out.println("There are " + count + "primes between 2 and " + x + " (" + (int) ratio + "% are primes)");
+        System.out.println("There are " + count + " primes between 2 and " + x + " (" + (int) ratio + "% are primes)");
         
     }
 
