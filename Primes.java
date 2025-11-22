@@ -1,12 +1,17 @@
 public class Primes {
     public static void main(String[] args) {
         int x = Integer.parseInt(args[0]);
+        int count =0;
         boolean[] arr = isPrime(x);
+        System.out.println("Prime numbers up to " + x);
         for(int i=0; i<arr.length; i++){
             if (arr[i]==true) {
                 System.out.println(i);
+                count++;
             }
         }
+        double ratio = (double) count / x * 100;
+        System.out.println("There are " + count + "primes between 2 and " + x + " (" + (int) ratio + "% are primes)");
         
     }
 
