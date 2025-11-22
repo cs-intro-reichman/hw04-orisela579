@@ -3,7 +3,7 @@ public class Primes {
         int x = Integer.parseInt(args[0]);
         int count =0;
         boolean[] arr = isPrime(x);
-        System.out.println("Prime numbers up to " + x);
+        System.out.println("Prime numbers up to " + x + ":");
         for(int i=0; i<arr.length; i++){
             if (arr[i]==true) {
                 System.out.println(i);
