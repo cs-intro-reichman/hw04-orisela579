@@ -32,6 +32,9 @@ public class MyString {
 
     /** If str1 contains str2, returns true; otherwise returns false. */
     public static boolean contains(String str1, String str2) {
+        if(str1.length()==0 || str2.length()==0){
+            return false;
+        }
         if(str1.length()<str2.length()){
             return false;
         }
