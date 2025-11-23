@@ -44,6 +44,7 @@ public class MyString {
         int count = 0;
         int gap = str1.length() - str2.length();
         for(int i=0; i<=gap; i++){
+            count = 0;
             if (str2.charAt(0)==str1.charAt(i)) {
                 for(int j=0; j<str2.length(); j++){
                     if(str2.charAt(j)!=str1.charAt(i+j)){
